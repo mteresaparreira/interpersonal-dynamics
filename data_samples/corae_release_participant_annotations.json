@@ -1,0 +1,25 @@
+{
+  "_comment": "SYNTHETIC EXAMPLE - not real participant data. Format produced by the public CORAE release, used in Study 3 (triadic, in person). One file per participant per session; a parallel session-<n>_aggregate.json wraps all three participants under 'Participants Data'. Each participant rates the other two, so 'videos' holds two entries. 'trigger' is start | input | end.",
+  "participant_external_id": "A",
+  "participant_internal_id": 7,
+  "project_id": 1,
+  "project_token": "0dbc105",
+  "session_id": 3,
+  "session_token": "dd8fd6a",
+  "participant_token": "421c4e1",
+  "videos": [
+    {
+      "video_id": 67,
+      "duration": 299.733333,
+      "frame_rate": 15.0,
+      "owner_ids": [8, 9],
+      "annotations": [
+        {"timecode": 0.0,       "frame_number": 0,   "annotation_value": 0.0,  "trigger": "start"},
+        {"timecode": 12.563894, "frame_number": 188, "annotation_value": -1.0, "trigger": "input"},
+        {"timecode": 13.020566, "frame_number": 195, "annotation_value": -2.0, "trigger": "input"},
+        {"timecode": 14.108264, "frame_number": 212, "annotation_value": -1.0, "trigger": "input"},
+        {"timecode": 299.733333,"frame_number": 4496,"annotation_value": 3.0,  "trigger": "end"}
+      ]
+    }
+  ]
+}

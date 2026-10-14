@@ -1,0 +1,6 @@
+participant_number,p_position,internal_p_number,rated_p,internal_rated_number,session,timecode,frame_number,annotation_value,trigger,rater_rated
+1-B,B,8,A,7,1,0.0,0,0.0,start,B_A
+1-B,B,8,A,7,1,21.586522,324,1.0,input,B_A
+1-B,B,8,A,7,1,22.120000,332,2.0,input,B_A
+1-B,B,8,C,9,1,0.0,0,0.0,start,B_C
+1-B,B,8,C,9,1,35.400000,531,-1.0,input,B_C

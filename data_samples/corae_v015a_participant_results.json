@@ -1,0 +1,13 @@
+{
+  "_comment": "SYNTHETIC EXAMPLE - not real participant data. Format produced by CORAE build 0.15.0a, used in Study 2 (dyadic, online). One file per participant, downloaded by the participant as <participantID>results.json. Keys after 'ID' are timecodes 'H:M:S:frame' (video is 30 fps); values are the slider position as a string, integer in [-7, +7]. A sample is written every ~1 s AND whenever the slider moves, so spacing is irregular.",
+  "ID": "104",
+  "0:0:0:24": "0",
+  "0:0:1:37": "0",
+  "0:0:1:49": "0",
+  "0:0:2:62": "-1",
+  "0:0:2:74": "-1",
+  "0:0:3:86": "-2",
+  "0:0:3:99": "-1",
+  "0:0:4:112": "0",
+  "0:0:4:124": "1"
+}

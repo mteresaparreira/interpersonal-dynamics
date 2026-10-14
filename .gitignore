@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+# This repository must never contain participant data. See docs/privacy.md.
+# The rules below are a safety net, not a substitute for checking what you add.
+# ---------------------------------------------------------------------------
+
+# Raw and derived media
+*.mp4
+*.mp3
+*.wav
+*.avi
+*.mkv
+*.m4a
+*.bag
+*.jpg
+*.jpeg
+*.png
+*.heic
+
+# Participant-level records
+ParticipantLog*
+participant_log*
+*prolific*
+*Prolific*
+users.csv
+*results.json
+*_annotations.json
+*_aggregate.json
+*.vtt
+transcript*/
+extracted_audio*/
+Study Sessions/
+Pilot Sessions/
+ParticipantsJSON/
+survey_data/
+midq*
+*Qualtrics*
+*qualtrics*
+
+# Model-ready feature matrices and intermediates (large, derived from raw media)
+all_data_*.csv
+df_interpolated*
+merged_feats*/
+opensmile_feats/
+openface/
+vad_logs*
+*.pkl
+*.pth
+*.h5
+*.npy
+*.hdf5
+
+# Secrets
+.env
+*.key
+*token*
+!**/tokenizer*
+
+# Tooling
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+wandb/
+.DS_Store
+*.zip
+
+# ---------------------------------------------------------------------------
+# Exception: data_samples/ holds hand-written synthetic examples of each file
+# format. They are named after the real files on purpose, so the rules above
+# would otherwise swallow them. Nothing real may ever be placed in this folder.
+# ---------------------------------------------------------------------------
+!data_samples/**

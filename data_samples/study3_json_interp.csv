@@ -1,0 +1,5 @@
+participant_number,p_position,internal_p_number,rated_p,internal_rated_number,session,frame_seconds,value,diff_value,sign_diff_value
+1-B,B,8,A,7,1-B,0.0,0.0,0.0,0.0
+1-B,B,8,A,7,1-B,0.5,1.0,1.0,1.0
+1-B,B,8,A,7,1-B,1.0,1.0,0.0,0.0
+1-B,B,8,A,7,1-B,1.5,1.0,0.0,0.0

@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH -J lstm                	# Job name
+#SBATCH -o lstm_%j.out              	# output file (%j expands to jobID)
+#SBATCH -e lstm_%j.err              	# error log file (%j expands to jobID)
+#SBATCH --mail-type=ALL                  	# Request status by email
+#SBATCH --mail-user=mb2554@cornell.edu.   	# Email address to send results to.
+#SBATCH -N 1                            	# Total number of nodes requested
+#SBATCH -n 8                             	# Total number of cores requested
+#SBATCH --get-user-env                   	# retrieve the users login environment
+#SBATCH --mem=32gb                      	# server memory requested (per node)
+#SBATCH -t 40:00:00                       	# Time limit (hh:mm:ss)
+#SBATCH --partition=ju         	# Request partition. If you want to submit to another partition (eg, default_partition) so you have access to all faculty computers, not just ours, change this argument
+#SBATCH --gres=gpu:1
+
+#export your required environment variables below
+#################################################
+
+export WANDB_API_KEY=${WANDB_API_KEY:?set this in your environment, do not commit it}
+
+python3 train_lstm_5_norm.py
