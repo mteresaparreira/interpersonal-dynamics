@@ -90,6 +90,15 @@ person rated. See
 So: 34 sessions were **run and recorded**, 15 of them have **retrospective ratings**
 on this drive. Treat 15/45/90 as the annotated set and 34/102 as the behavioural set.
 
+⚠️ **The annotated sessions are exactly 1–15 — a perfectly contiguous block.**
+Sessions 16–34 have no CORAE files at all: not partial, not corrupted, absent. That
+pattern does not look like per-session failure; it looks like either annotation
+collection stopping after session 15 while recording continued, or the files for
+16–34 living on Cornell Box and never being copied down. **Resolve this before
+treating 15 sessions as the dataset size** — if the files exist, the annotated set
+doubles to 34 sessions / 102 participants / 204 rating curves. Per-session detail:
+[`data-coverage.md`](data-coverage.md#study-3--annotations-stop-dead-at-session-15).
+
 ### Annotation statistics (the 15 annotated sessions)
 
 - 3460 raw annotation events across 90 curves; mean 38.4 events per curve
@@ -104,8 +113,14 @@ on this drive. Treat 15/45/90 as the annotated set and 34/102 as the behavioural
 ### Face-tracking quality
 
 `results/study3/openface_confidence_per_participant.csv`, 104 rows. Mean OpenFace
-confidence 0.91; 95 % of frames above 0.7 on average; no missing frames. Four
-streams are badly tracked and should be excluded or re-processed:
+confidence 0.91; 95 % of frames above 0.7 on average; no missing frames.
+
+**Three streams have no OpenFace output at all** — `3_C`, `17_A`, `21_A`. For
+`17_A` and `21_A` an `_of_details.txt` exists without a CSV, so extraction was
+attempted and did not complete. Re-running `openface_run_all_vids.ps1` on those
+three clips is the obvious fix.
+
+Four more are badly tracked and should be excluded or re-processed:
 
 | Stream | Mean confidence | Frames > 0.7 |
 |---|---|---|
@@ -113,6 +128,9 @@ streams are badly tracked and should be excluded or re-processed:
 | `3_A` | 0.33 | 32 % |
 | `34_C` | 0.43 | 43 % |
 | `24_C` | 0.63 | 65 % |
+
+Session 3 is worst affected and it **is** one of the annotated sessions: `3_C` has
+no output and `3_A` tracks at 0.33, leaving only `3_B` usable.
 
 ## Caveats specific to this study
 

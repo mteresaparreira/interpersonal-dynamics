@@ -8,6 +8,9 @@ Paths are relative to the project working drive (`.../cornell/2025_honda/`).
 `[NO ACCESS]` means the artefact is referenced by the protocol, the papers, or the
 code but is not present on that drive.
 
+For **per-session** completeness — which individual sessions are missing which
+streams, and why — see [`data-coverage.md`](data-coverage.md).
+
 ---
 
 ## Study 2 — dyadic, online
@@ -73,8 +76,8 @@ of truth.
 | Session audio (`.wav`) | **34** | `2024_study3_data/extracted_audio/` |
 | Whisper transcripts (`.vtt`) | **34** | `2024_study3_data/extracted_audio_transcripts/` |
 | Transcripts as dataframes (start, end, speaker, text) | **34** | `2024_study3_data/transcript_dfs/` |
-| OpenFace per-participant CSVs (714 cols) | **34 sessions / 102 streams** | `2024_study3_data/openface/<session>_<A\|B\|C>.csv` |
-| CORAE annotation JSONs | **15 sessions × 3 participants** + aggregates | `2024_study3_data/json/<session>/` |
+| OpenFace per-participant CSVs (714 cols) | **99 of 102 streams** — missing `3_C`, `17_A`, `21_A` | `2024_study3_data/openface/<session>_<A\|B\|C>.csv` |
+| CORAE annotation JSONs | **sessions 1–15 only**, × 3 participants + aggregates ⚠️ | `2024_study3_data/json/<session>/` |
 | Flattened annotations (long form) | 3460 rows, 90 curves | `2024_study3_code/study3_json.csv` |
 | Resampled annotations, 2 Hz | 27 000 rows, **45 of 90 curves** ⚠️ | `2024_study3_code/study3_json_interp.csv` |
 | OpenFace confidence QC | 104 rows | `2024_study3_code/openface_predictions.csv` — **copied into this repo** |

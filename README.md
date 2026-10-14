@@ -84,8 +84,17 @@ since the IDC describes the interaction rather than either person.
 **Study 3** has per-stream OpenFace, audio, Whisper transcripts and annotations, but
 **no model-ready matrix was ever assembled** for it.
 
+**Coverage.** Study 2 is complete: 27 of 30 sessions have every stream, and the
+three excluded ones still have all their *raw* data — they were dropped for
+recording quality, and the reasons are logged. Study 3 splits: **behavioural data
+is complete for all 34 sessions**, but **CORAE annotations stop dead at session
+15**. Sessions 16–34 have no annotation files on the drive at all — a perfectly
+contiguous cut that needs explaining before anyone treats 15 sessions as the
+dataset size.
+
 Column-by-column: **[`docs/data-dictionary.md`](docs/data-dictionary.md)** ·
 **[`docs/feature-index.md`](docs/feature-index.md)** (all 237 `sN` aliases) ·
+per-session coverage: **[`docs/data-coverage.md`](docs/data-coverage.md)** ·
 file shapes: **[`data_samples/`](data_samples/)** (synthetic) ·
 where everything lives: **[`docs/data-inventory.md`](docs/data-inventory.md)**
 
@@ -138,7 +147,7 @@ Each is documented in place in
 ## Repository layout
 
 ```
-docs/                                  protocols, data dictionary, inventory, results, privacy
+docs/                                  protocols, data dictionary, coverage, inventory, results, privacy
 data_samples/                          synthetic examples of every file format
 results/
   study2/                              sweep + fold metrics, feature importance, t-tests, QC
@@ -162,10 +171,11 @@ study3_triadic_inperson/
 
 1. [`docs/privacy.md`](docs/privacy.md) — before touching anything
 2. [`docs/study2-dyadic-online.md`](docs/study2-dyadic-online.md) — where the data comes from
-3. [`docs/data-dictionary.md`](docs/data-dictionary.md) — especially §5, the pitfalls
-4. `study2_dyadic_online/preprocessing/process_corae_jsons.ipynb` — raw ratings → IP / IDC
-5. `study2_dyadic_online/preprocessing/merge_all_feats.ipynb` — the whole feature pipeline in one notebook
-6. [`docs/results.md`](docs/results.md) — what has and has not worked
+3. [`docs/data-coverage.md`](docs/data-coverage.md) — what actually exists, session by session
+4. [`docs/data-dictionary.md`](docs/data-dictionary.md) — especially §5, the pitfalls
+5. `study2_dyadic_online/preprocessing/process_corae_jsons.ipynb` — raw ratings → IP / IDC
+6. `study2_dyadic_online/preprocessing/merge_all_feats.ipynb` — the whole feature pipeline in one notebook
+7. [`docs/results.md`](docs/results.md) — what has and has not worked
 
 ### Running anything
 

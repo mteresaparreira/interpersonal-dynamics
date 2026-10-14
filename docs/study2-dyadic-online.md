@@ -136,6 +136,26 @@ The `ParticipantLog.xlsx` on the lab drive has 137 rows (126 main study, 11 pilo
 `USE?` ∈ {Y, M} selects the 54 that reach the model-ready dataset, and
 `USE4platform?` ∈ {Y, M} selects 58 usable for tool-validation analyses.
 
+### The three excluded sessions
+
+The papers attribute the 30 → 27 drop to "hardware inconsistencies" and "connection
+problems". Checked against the drive, that is not quite what happened: `2425`,
+`4041` and `6263` have **complete raw data** — both videos, both audio tracks, the
+merged track, and both CORAE annotation files. What they lack is everything
+downstream; the feature pipeline was never run on them. The `Observations` column
+of the participant log gives the actual reasons, all about recording quality:
+
+| Session | Logged reason |
+|---|---|
+| `2425` | a participant video went missing mid-session; the recording is split into `part1` / `part2` |
+| `4041` | large glasses occlude much of one face; the two audio tracks are different lengths |
+| `6263` | audio extremely low; camera moving a lot; one face partially covered; audio bleed between participants |
+
+These are **judgement calls that could be revisited**, not data loss. `4041` and
+`6263` would probably still fail the 0.7 OpenFace confidence floor; `2425` is a
+concatenation problem and may be recoverable. Full per-session table:
+[`data-coverage.md`](data-coverage.md#study-2--the-three-excluded-sessions-are-recoverable).
+
 ## Known limitations
 
 - Sample skews heavily to native English speakers in the United States.
